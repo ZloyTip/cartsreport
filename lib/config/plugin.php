@@ -2,7 +2,7 @@
 return array (
   'name' => _wp('Products in shopping carts'),
   'description' => _wp('Plugin adds new reports to the store.'),
-  'icon' => 'img/cartsreport.png',
+  'img' => 'img/cartsreport.png',
   'version' => '1.0.0',
   'vendor' => '972539',
   'handlers' => 
