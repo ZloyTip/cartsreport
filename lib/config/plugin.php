@@ -11,6 +11,7 @@ return array (
       'frontend_checkout'   => 'frontendCheckout',
       'backend_reports'     => 'backendReports',
       'frontend_cart'       => 'frontendCart',
+      'cart_delete'         => 'cartDelete',
       'cart_add'            => 'cartAdd',
   ),
 );

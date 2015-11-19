@@ -19,6 +19,19 @@ class shopCartsreportPlugin extends shopPlugin
 
 
 
+    public function cartDelete($item)
+    {
+
+        $cart = new shopCart();
+        if(!$cart->count()) {
+            $m = new shopCartsreportPluginCartModel();
+            $m->deleteByField('code', $cart->getCode());
+        }
+
+        return null;
+    }
+
+
     public function cartAdd($item)
     {
         $cart = new shopCart();
