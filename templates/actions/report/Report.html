@@ -56,12 +56,13 @@
             <td><nobr>{$item.quantity} &times;</nobr></td>
             <td>
                 <b><a href="?action=products#/product/{$item.product.id}/edit/" style="display: inline">{$item.product.name|escape}</a></b>
+                {ifempty($item.sku_name)|escape} {if !empty($item.sku_code)}<em>{$item.sku_code|escape}</em>{/if}
                 {$subtotal = $subtotal + $item.price * $item.quantity}
                 {$currency = $item.currency}
                 {if !empty($item.services)}
-                    <br>
                     {foreach $item.services as $service}
                         {if !empty($service.id)}
+                            <br> +
                             <i>{$service.name}
                             {if !empty($service.variants) && $service.variant_id}
                                 ({$service.variants[$service.variant_id].name})
